@@ -1,0 +1,41 @@
+<!-- Sebastian Morton - Zadanie 56 (Wzór na liczby pierwsze) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Morton_Zadanie56</title>
+  <script type="text/javascript">
+    function zadanie56_morton() {
+      let wynik = "";
+      let licznik_linii = 0;
+
+      for (let i = 0; i < 40; i++) {
+        const w = i * i + i + 41;
+        wynik += `i=${i} &nbsp; w(${i})=${w}<br>`;
+        licznik_linii++;
+
+        if (licznik_linii === 5) {
+          wynik += "<hr>"; // linia oddzielająca kolejne partie po 5 linii
+          licznik_linii = 0;
+        }
+      }
+
+      document.getElementById("wynik_morton56_wzor").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 56 (Liczby pierwsze wg wzoru w(i)=i^2+i+41)</h2>
+  <button onclick="zadanie56_morton()">Morton_Zadanie56</button>
+  <button onclick="alert(zadanie56_morton.toString())">Morton_Zadanie56-KOD</button>
+
+  <div id="wynik_morton56_wzor" style="margin-top: 20px; font-size: 18px; color: navy;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Program wykorzystuje wzór: <code>w(i) = i^2 + i + 41</code><br>
+    Pętla wykonuje się 40 razy (i = 0..39)<br>
+    Co 5 linii następuje oddzielenie <code>&lt;hr&gt;</code> dla czytelności.
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Sebastian Morton - Zadanie 41 -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 41 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function wypisz_petla_for_morton() {
+      let tekst = "<b>Petla for - liczby od 1 do 10:</b><br>";
+      for (let i = 1; i <= 10; i++) {
+        tekst += "i = " + i + "<br>";
+      }
+      document.getElementById("wynik_morton41").innerHTML = tekst;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 41 (Pętla for)</h2>
+  <button onclick="wypisz_petla_for_morton()">Wypisz liczby od 1 do 10</button>
+
+  <div id="wynik_morton41" style="margin-top: 20px; font-size: 18px; color: navy;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Pętla <code>for</code> umożliwia powtarzanie instrukcji określoną ilość razy.<br>
+    W tym zadaniu wypisujemy liczby od 1 do 10.<br>
+    Składnia: <code>for (let i = start; i &lt;= koniec; i++) { ... }</code>
+  </div>
+</body>
+</html>

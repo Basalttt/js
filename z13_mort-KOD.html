@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>zadanie13_kow_KOD.html</title>
+</head>
+<body>
+  <h2>Kod programu - Zadanie 13</h2>
+  <textarea rows="20" cols="80" readonly>
+var m_morton = parseInt(prompt("Podaj m:", ""));
+var m1_morton = m_morton + 1;
+var m2_morton = m_morton * (m_morton + 1);
+
+document.write("<h2>Rozkład ułamka egipskiego</h2>");
+document.write("<p>Podano m = " + m_morton + "</p>");
+document.write("<p>1/" + m_morton + " = 1/" + m1_morton + " + 1/" + m2_morton + "</p>");
+  </textarea>
+  <br><br>
+  <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 22 - Morton</title>
+  <script type="text/javascript">
+    function Pole_mor(a_kow, b_kow) {
+      return parseFloat(a_kow) * parseFloat(b_kow);
+    }
+    function Obwod_mor(a_kow, b_kow) {
+      return 2 * (parseFloat(a_kow) + parseFloat(b_kow));
+    }
+    function oblicz() {
+      var a = document.getElementById("a_dana_mor").value;
+      var b = document.getElementById("b_dana_mor").value;
+      document.getElementById("wyprowadz_pole_mor").innerText = "Pole: " + Pole_mor(a, b).toFixed(2);
+      document.getElementById("wyprowadz_obwod_mor").innerText = "Obwód: " + Obwod_mor(a, b).toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h2>Pole i obwód prostokąta</h2>
+  a = <input type="text" id="a_dana_mor">
+  b = <input type="text" id="b_dana_mor">
+  <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+  <div id="wyprowadz_pole_mor"></div>
+  <div id="wyprowadz_obwod_mor"></div>
+</body>
+</html>

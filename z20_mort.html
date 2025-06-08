@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 20 - Morton</title>
+  <script type="text/javascript">
+    function AB_mor() {
+      var xa_mor = parseFloat(document.getElementById('xa').value);
+      var ya_mor = parseFloat(document.getElementById('ya').value);
+      var xb_mor = parseFloat(document.getElementById('xb').value);
+      var yb_mor = parseFloat(document.getElementById('yb').value);
+      var ab = Math.sqrt(Math.pow(xb_mor - xa_mor, 2) + Math.pow(yb_mor - ya_mor, 2));
+      document.getElementById("wynik").innerHTML += "AB = " + ab.toFixed(2) + "<br>";
+    }
+
+    function BC_mor() {
+      var xb_mor = parseFloat(document.getElementById('xb').value);
+      var yb_mor = parseFloat(document.getElementById('yb').value);
+      var xc_mor = parseFloat(document.getElementById('xc').value);
+      var yc_mor = parseFloat(document.getElementById('yc').value);
+      var bc = Math.sqrt(Math.pow(xc_mor - xb_mor, 2) + Math.pow(yc_mor - yb_mor, 2));
+      document.getElementById("wynik").innerHTML += "BC = " + bc.toFixed(2) + "<br>";
+    }
+
+    function AC_mor() {
+      var xa_mor = parseFloat(document.getElementById('xa').value);
+      var ya_mor = parseFloat(document.getElementById('ya').value);
+      var xc_mor = parseFloat(document.getElementById('xc').value);
+      var yc_mor = parseFloat(document.getElementById('yc').value);
+      var ac = Math.sqrt(Math.pow(xc_mor - xa_mor, 2) + Math.pow(yc_mor - ya_mor, 2));
+      document.getElementById("wynik").innerHTML += "AC = " + ac.toFixed(2) + "<br>";
+    }
+  </script>
+</head>
+<body>
+  <h2>Oblicz długości boków trójkąta</h2>
+  Punkt A: x=<input id="xa"> y=<input id="ya"><br>
+  Punkt B: x=<input id="xb"> y=<input id="yb"><br>
+  Punkt C: x=<input id="xc"> y=<input id="yc"><br><br>
+
+  <input type="button" value="Oblicz AB" onclick="AB_mor()">
+  <input type="button" value="Oblicz BC" onclick="BC_mor()">
+  <input type="button" value="Oblicz AC" onclick="AC_mor()"><br><br>
+
+  <div id="wynik" style="color:green; font-size:20px;"></div>
+</body>
+</html>

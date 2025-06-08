@@ -1,0 +1,17 @@
+<!DOCTYPE html>  
+<html lang="pl-PL">  
+<HTML> 
+<HEAD> 
+<meta charset="utf-8">   
+<TITLE>Morton</TITLE> 
+</HEAD> 
+<BODY> 
+<SCRIPT> 
+document.write("$$$$$$$$$$$$$$$$$$$".fontcolor("#800000")+"<br>"); 
+document.write("$".fontcolor("800000")+"&nbsp;&nbsp;&nbsp;Adam ".fontcolor("#808000 ")+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $".fontcolor("#800000")+"<br>"); 
+document.write("$".fontcolor("#800000")+"&nbsp;&nbsp;&nbsp;Morton ".fontcolor("#808000 ")+"&nbsp;&nbsp;$".fontcolor("#800000")+"<br>"); 
+document.write("$$$$$$$$$$$$$$$$$$$".fontcolor("#800000")+"<br>"); 
+</SCRIPT> 
+</BODY> 
+</HTML>
+

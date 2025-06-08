@@ -1,0 +1,39 @@
+<!-- Sebastian Morton - Zadanie 48 (Suma szeregu harmonicznego) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Morton_Zadanie48</title>
+  <script type="text/javascript">
+    function zadanie48_morton() {
+      let suma_mor = 0;
+      let i_mor = 1;
+
+      while (i_mor <= 1000000) {
+        suma_mor += 1 / i_mor;
+        i_mor++;
+      }
+
+      document.getElementById("wynik_morton48").innerHTML =
+        `<b>Suma szeregu harmonicznego od 1 do 1 000 000:</b><br>${suma_mor.toFixed(6)}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 48 (Szereg harmoniczny)</h2>
+  <button onclick="zadanie48_morton()">Morton_Zadanie48</button>
+  <button onclick="alert(zadanie48_morton.toString())">Morton_Zadanie48-KOD</button>
+
+  <div id="wynik_morton48" style="margin-top: 20px; font-size: 20px; color: darkmagenta;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis algorytmu:</b><br>
+    Krok 1: suma_mor = 0<br>
+    Krok 2: i_mor = 1<br>
+    Krok 3: suma_mor += 1 / i_mor<br>
+    Krok 4: i_mor++<br>
+    Krok 5: jeśli i_mor &le; 1 000 000, wróć do Kroku 3<br>
+    Krok 6: wypisz suma_mor z 6 miejscami po przecinku
+  </div>
+</body>
+</html>

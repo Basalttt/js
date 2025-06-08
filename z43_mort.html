@@ -1,0 +1,35 @@
+<!-- Sebastian Morton - Zadanie 43 (Parzyste liczby do wartości z prompt) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Morton_Zadanie43</title>
+  <script type="text/javascript">
+    function wypisz_parzyste_morton() {
+      const koniec_petli_mor = parseInt(prompt("Podaj liczbę końcową:"));
+      let wynik = "<b>Parzyste liczby od 2 do " + koniec_petli_mor + ":</b><br>";
+
+      for (let i_mor = 2; i_mor <= koniec_petli_mor; i_mor += 2) {
+        wynik += i_mor + " ";
+      }
+
+      document.getElementById("wynik_morton43").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Morton - Zadanie 43 (Parzyste liczby)</h2>
+
+  <button onclick="wypisz_parzyste_morton()">Morton_Zadanie43</button>
+  <button onclick="alert(wypisz_parzyste_morton.toString())">Morton_Zadanie43-KOD</button>
+
+  <div id="wynik_morton43" style="margin-top: 20px; font-size: 18px; color: darkblue;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Wczytanie liczby końcowej z <code>prompt()</code><br>
+    Pętla <code>for</code> z inkrementacją co 2<br>
+    Nazwy zmiennych zawierają 3 litery nazwiska: <code>i_mor</code>, <code>koniec_petli_mor</code>
+  </div>
+</body>
+</html>

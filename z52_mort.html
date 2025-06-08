@@ -1,0 +1,54 @@
+<!-- Sebastian Morton - Zadanie 52 (Rysowanie prostokąta z gwiazdek) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Morton_Zadanie52</title>
+  <script type="text/javascript">
+    function rysuj_prostokat_morton() {
+      const a_mor = ("morton".length % 4) + 5;   // 6 % 4 + 5 = 2 + 5 = 7
+      const b_mor = ("sebastian".length % 6) + 20; // 9 % 6 + 20 = 3 + 20 = 23
+      let prostokat = "";
+
+      // Górna krawędź
+      for (let i = 0; i < b_mor; i++) {
+        prostokat += "*";
+      }
+      prostokat += "<br>";
+
+      // Środkowe wiersze (a - 2, bo góra i dół już zajęte)
+      for (let i = 0; i < a_mor - 2; i++) {
+        prostokat += "*";
+        for (let j = 0; j < b_mor - 2; j++) {
+          prostokat += "&nbsp;";
+        }
+        prostokat += "*<br>";
+      }
+
+      // Dolna krawędź
+      for (let i = 0; i < b_mor; i++) {
+        prostokat += "*";
+      }
+
+      document.getElementById("wynik_morton52_prostokat").innerHTML =
+        `<pre style='font-size:16px; line-height: 1;'>${prostokat}</pre>`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 52 (Rysowanie prostokąta z gwiazdek)</h2>
+  <button onclick="rysuj_prostokat_morton()">Morton_Zadanie52</button>
+  <button onclick="alert(rysuj_prostokat_morton.toString())">Morton_Zadanie52-KOD</button>
+
+  <div id="wynik_morton52_prostokat" style="margin-top: 20px; font-family: monospace;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: green;">
+    <b>Opis:</b><br>
+    a = (liczba liter nazwiska % 4) + 5 = 7<br>
+    b = (liczba liter imienia % 6) + 20 = 23<br>
+    Pętla 1: górny rząd gwiazdek<br>
+    Pętla 2: środek z gwiazdkami na brzegach<br>
+    Pętla 3: dolny rząd gwiazdek
+  </div>
+</body>
+</html>

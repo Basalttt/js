@@ -1,0 +1,42 @@
+<!-- Sebastian Morton - Zadanie 47 (Sprawdzanie boków trójkąta) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Morton_Zadanie47</title>
+  <script type="text/javascript">
+    function zadanie47_morton() {
+      let a_mor, b_mor, c_mor;
+      do {
+        a_mor = parseFloat(prompt("Podaj bok a:", ""));
+        b_mor = parseFloat(prompt("Podaj bok b:", ""));
+        c_mor = parseFloat(prompt("Podaj bok c:", ""));
+      } while (
+        !(a_mor > 0 && b_mor > 0 && c_mor > 0 &&
+          a_mor + b_mor > c_mor &&
+          a_mor + c_mor > b_mor &&
+          b_mor + c_mor > a_mor)
+      );
+
+      document.getElementById("wynik_morton47").innerHTML =
+        `<b>Podano poprawne boki trójkąta:</b><br>a = ${a_mor}, b = ${b_mor}, c = ${c_mor}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 47 (Sprawdzanie boków trójkąta)</h2>
+  <button onclick="zadanie47_morton()">Morton_Zadanie47</button>
+  <button onclick="alert(zadanie47_morton.toString())">Morton_Zadanie47-KOD</button>
+
+  <div id="wynik_morton47" style="margin-top: 20px; font-size: 18px; color: navy;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Program wczytuje boki trójkąta i sprawdza:<br>
+    - Czy wszystkie boki > 0<br>
+    - Czy spełniona jest nierówność trójkąta:<br>
+    &nbsp;&nbsp;&nbsp; a + b > c, a + c > b, b + c > a<br>
+    Jeśli warunki nie są spełnione, dane są wczytywane ponownie.
+  </div>
+</body>
+</html>

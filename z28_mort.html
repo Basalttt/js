@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 28 - Funkcje matematyczne</title>
+  <script type="text/javascript">
+    function suma_mor(a, b) { return a + b; }
+    function odejmowanie_mor(a, b) { return a - b; }
+    function mnozenie_mor(a, b) { return a * b; }
+    function od_kwadratu_mor(a, b) {
+      return "a^2=" + (a*a) + ", b^2=" + (b*b);
+    }
+    function reszta_z_dzielenia_a_przez_b_mor(a, b) {
+      return a % b;
+    }
+
+    function pokaz_wyniki() {
+      var a = parseFloat(prompt("a=", ""));
+      var b = parseFloat(prompt("b=", ""));
+      var tekst = "suma: " + suma_mor(a, b) + "<br>" +
+                  "różnica: " + odejmowanie_mor(a, b) + "<br>" +
+                  "iloczyn: " + mnozenie_mor(a, b) + "<br>" +
+                  "kwadraty: " + od_kwadratu_mor(a, b) + "<br>" +
+                  "reszta z dzielenia: " + reszta_z_dzielenia_a_przez_b_mor(a, b);
+      document.getElementById("rezultat").innerHTML = tekst;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 28</h2>
+  <button onclick="pokaz_wyniki()">Oblicz</button>
+  <div id="rezultat" style="color:blue; font-size:18px;"></div>
+</body>
+</html>

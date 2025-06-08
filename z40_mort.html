@@ -1,0 +1,32 @@
+<!-- Sebastian Morton - Zadanie 40 -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 40 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function zegar_morton() {
+      const teraz = new Date();
+
+      const godzina = teraz.getHours().toString().padStart(2, '0');
+      const minuta = teraz.getMinutes().toString().padStart(2, '0');
+      const sekunda = teraz.getSeconds().toString().padStart(2, '0');
+
+      const czas = godzina + ":" + minuta + ":" + sekunda;
+      document.getElementById("zegar_morton40").innerHTML = czas;
+
+      setTimeout(zegar_morton, 1000);
+    }
+  </script>
+</head>
+<body onload="zegar_morton()">
+  <h2>Sebastian Morton - Zadanie 40 (Zegar dynamiczny)</h2>
+  <div id="zegar_morton40" style="font-size: 36px; font-weight: bold; color: darkred;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Zegar odświeża się automatycznie co sekundę przy użyciu funkcji <code>setTimeout()</code>.<br>
+    Czas wyświetlany jest w formacie HH:MM:SS z wiodącymi zerami.
+  </div>
+</body>
+</html>

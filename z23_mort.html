@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 23 - Morton</title>
+  <script type="text/javascript">
+    function oblicz() {
+      var D = parseFloat(document.getElementById('wysokosc').value);
+      var X = parseFloat(document.getElementById('odleglosc').value);
+      var dlugosc = Math.sqrt(D*D + X*X);
+      var kat = Math.atan(D/X) * (180 / Math.PI);
+
+      document.getElementById("wynik").innerHTML =
+        "Długość drabiny: " + dlugosc.toFixed(2) + " m<br>Kąt nachylenia: " + kat.toFixed(2) + "°";
+    }
+  </script>
+</head>
+<body>
+  <h2>Drabina przy ścianie</h2>
+  Wysokość (D): <input id="wysokosc"> m<br>
+  Odległość od ściany (X): <input id="odleglosc"> m<br>
+  <input type="button" value="Oblicz" onclick="oblicz()">
+  <div id="wynik" style="color:darkgreen; font-size:20px;"></div>
+</body>
+</html>

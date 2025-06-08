@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>zadanie14_kow.html</title>
+  <script type="text/javascript">
+    var m_morton = parseInt(prompt("Podaj m:", ""));
+    var m1 = m_morton + 2;
+    var m2 = m_morton * (m_morton + 2);
+    var m3 = m_morton * (m_morton + 1);
+
+    document.write("<h2>Rozkład ułamka egipskiego na trzy składniki</h2>");
+    document.write("<p>Podano m = " + m_morton + "</p>");
+    document.write("<p>1/" + m_morton + " = 1/" + m1 + " + 1/" + m2 + " + 1/" + m3 + "</p>");
+  </script>
+</head>
+<body>
+</body>
+</html>

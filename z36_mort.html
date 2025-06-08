@@ -1,0 +1,35 @@
+<!-- Sebastian Morton - Zadanie 36 -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 36 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function oblicz_pit_morton() {
+      const A = parseInt(prompt("Podaj pierwszą liczbę A:", ""));
+      const B = parseInt(prompt("Podaj drugą liczbę B:", ""));
+
+      const wynik =
+        "<div style='color:navy; font-size:28px;'>" +
+        "Wczytane liczby: A = " + A + " &nbsp;&nbsp;&nbsp; B = " + B + "<br><br>" +
+        "(" + A + " + " + B + ")<sup>3</sup> = " +
+        A + "<sup>3</sup> + 3·(" + A + ")<sup>2</sup>·" + B +
+        " + 3·" + A + ·" + B + "<sup>2</sup> + " + B + "<sup>3</sup><br><br>" +
+        "= " +
+        Math.pow(A, 3) + " + " +
+        3 * Math.pow(A, 2) * B + " + " +
+        3 * A * Math.pow(B, 2) + " + " +
+        Math.pow(B, 3) + " = " +
+        (Math.pow(A + B, 3)) +
+        "</div>";
+
+      document.getElementById("wynik_morton36").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 36 (Rozwinięcie wyrażenia (A + B)<sup>3</sup>)</h2>
+  <button onclick="oblicz_pit_morton()">Oblicz</button>
+  <div id="wynik_morton36" style="margin-top: 20px;"></div>
+</body>
+</html>

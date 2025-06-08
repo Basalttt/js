@@ -1,0 +1,34 @@
+<!-- Sebastian Morton - Zadanie 42 -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 42 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function wypisz_petla_while_morton() {
+      let i = 10;
+      let wynik = "<b>Pętla while - liczby od 10 do 1:</b><br>";
+
+      while (i >= 1) {
+        wynik += "i = " + i + "<br>";
+        i--;
+      }
+
+      document.getElementById("wynik_morton42").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 42 (Pętla while)</h2>
+  <button onclick="wypisz_petla_while_morton()">Wypisz liczby od 10 do 1</button>
+
+  <div id="wynik_morton42" style="margin-top: 20px; font-size: 18px; color: darkred;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Pętla <code>while</code> wykonuje blok kodu dopóki warunek logiczny jest spełniony.<br>
+    Tutaj wypisujemy liczby malejąco od 10 do 1.<br>
+    Składnia: <code>while (warunek) { ... }</code>
+  </div>
+</body>
+</html>

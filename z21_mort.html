@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 21 - Morton</title>
+  <script type="text/javascript">
+    function V(r, h) {
+      var r_mor = parseFloat(r);
+      var h_mor = parseFloat(h);
+      var obj = Math.PI * r_mor * r_mor * h_mor;
+      document.getElementsByName('obj')[0].value = obj.toFixed(2);
+      document.getElementById("vdiv").innerHTML = "V = " + obj.toFixed(2) + " cm³";
+    }
+
+    function Pc(r, h) {
+      var r_mor = parseFloat(r);
+      var h_mor = parseFloat(h);
+      var pole = 2 * Math.PI * r_mor * (r_mor + h_mor);
+      document.getElementsByName('pole')[0].value = pole.toFixed(2);
+      document.getElementById("pcdiv").innerHTML = "Pc = " + pole.toFixed(2) + " cm²";
+    }
+  </script>
+</head>
+<body>
+  <h2>Objętość i pole powierzchni walca</h2>
+  <form onsubmit="V(this.promien.value,this.wysokosc.value); Pc(this.promien.value,this.wysokosc.value); return false">
+    Promień: <input name="promien"> Wysokość: <input name="wysokosc">
+    <input type="submit" value="Oblicz">
+    <br><br>
+    V = <input name="obj"> Pc = <input name="pole">
+  </form>
+  <div id="vdiv" style="color:blue"></div>
+  <div id="pcdiv" style="color:blue"></div>
+</body>
+</html>

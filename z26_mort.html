@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sebastian Morton - Zadanie 26</title>
+  <script type="text/javascript">
+    function oblicz_morton26() {
+      var A = parseInt(prompt("Podaj pierwszą liczbę A:", ""));
+      var B = parseInt(prompt("Podaj drugą liczbę B:", ""));
+
+      var wynik = "wczytane liczby: A=" + A + " B=" + B + "<br><br>";
+      wynik += "(" + A + " + " + B + ")^3 = ";
+      wynik += A + "^3 + 3*" + A + "^2*" + B + " + 3*" + A + "*" + B + "^2 + " + B + "^3 = ";
+
+      var suma = Math.pow(A, 3) + 3 * Math.pow(A, 2) * B + 3 * A * Math.pow(B, 2) + Math.pow(B, 3);
+      wynik += suma + "<br>";
+
+      document.getElementById("wynik").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 26</h2>
+  <input type="button" value="Oblicz wyrażenie" onclick="oblicz_morton26()">
+  <div id="wynik" style="margin-top:20px; font-size:18px; color:navy;"></div>
+</body>
+</html>

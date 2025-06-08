@@ -1,0 +1,43 @@
+<!-- Sebastian Morton - Zadanie 44 (Pętla z naprzemiennym imieniem i nazwiskiem) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 44 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function wypisz_imie_nazwisko_morton() {
+      const imie = "Sebastian";
+      const nazwisko = "Morton";
+
+      const dl_nazwiska = nazwisko.length;
+      const ile_razy = (dl_nazwiska % 4) + 10; // (6 % 4) + 10 = 2 + 10 = 12
+      const wielkosc_liter = (dl_nazwiska % 3) + 40; // (6 % 3) + 40 = 0 + 40 = 40
+
+      let wynik = "<b>Naprzemienne wypisywanie:</b><br><br>";
+
+      for (let i = 1; i <= ile_razy; i++) {
+        if (i % 2 === 0) {
+          wynik += `<span style='font-size:${wielkosc_liter}px; color:green;'>${imie}</span><br>`;
+        } else {
+          wynik += `<span style='font-size:${wielkosc_liter}px; color:blue;'>${nazwisko}</span><br>`;
+        }
+      }
+
+      document.getElementById("wynik_morton44_petla").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 44 (Pętla for: naprzemienne wypisywanie imienia i nazwiska)</h2>
+  <button onclick="wypisz_imie_nazwisko_morton()">Wypisz</button>
+
+  <div id="wynik_morton44_petla" style="margin-top: 20px;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Ilość wypisań: (<code>length(nazwisko) % 4</code>) + 10 = 12<br>
+    Wielkość liter: (<code>length(nazwisko) % 3</code>) + 40px = 40px<br>
+    Nieparzyste indeksy: nazwisko, Parzyste: imię.
+  </div>
+</body>
+</html>

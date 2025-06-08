@@ -1,0 +1,35 @@
+<!-- Sebastian Morton - Zadanie 39 -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 39 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function show_prompt_morton() {
+      const imie = prompt("Jak masz na imię?", "Sebastian");
+
+      let komunikat;
+      if (imie === null || imie.trim() === "") {
+        komunikat = "Nie podałeś imienia.";
+      } else {
+        komunikat = "Witaj, " + imie + "! Miło Cię widzieć.";
+      }
+
+      document.getElementById("wynik_morton39").innerHTML = komunikat;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 39 (Prompt Box)</h2>
+  <button onclick="show_prompt_morton()">Pokaż Prompt Box</button>
+
+  <div id="wynik_morton39" style="margin-top: 20px; font-size: 18px; color: darkblue;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Teoria:</b><br>
+    Prompt Box pozwala użytkownikowi wprowadzić dane tekstowe.<br>
+    Używany m.in. do pobierania imienia, hasła, wieku itp.<br>
+    Wynik zwracany jest jako string lub <i>null</i>, jeśli kliknięto Anuluj.
+  </div>
+</body>
+</html>

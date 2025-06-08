@@ -1,0 +1,31 @@
+<!-- Sebastian Morton - Zadanie 38 -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 38 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function show_confirm_morton() {
+      const decyzja = confirm("Czy na pewno chcesz kontynuować?");
+
+      const wynik = decyzja
+        ? "Kliknąłeś OK - kontynuujemy działanie."
+        : "Kliknąłeś Anuluj - operacja została przerwana.";
+
+      document.getElementById("rezultat_morton38").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 38 (Confirm Box)</h2>
+  <button onclick="show_confirm_morton()">Pokaż Confirm Box</button>
+
+  <div id="rezultat_morton38" style="margin-top: 20px; font-size: 18px; color: navy;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Teoria:</b><br>
+    Confirm Box pozwala użytkownikowi wybrać: <i>OK</i> (true) lub <i>Anuluj</i> (false).<br>
+    Może być używany do potwierdzania decyzji przed kontynuacją np. usuwania danych.
+  </div>
+</body>
+</html>

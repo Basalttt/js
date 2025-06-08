@@ -1,0 +1,50 @@
+<!-- Sebastian Morton - Zadanie 30 - Walec -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 30 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function V_morton(r, h) {
+      r = parseFloat(r);
+      h = parseFloat(h);
+      return Math.PI * r * r * h;
+    }
+
+    function Pc_morton(r, h) {
+      r = parseFloat(r);
+      h = parseFloat(h);
+      return 2 * Math.PI * r * (r + h);
+    }
+
+    function oblicz_walec_morton(form) {
+      var r = form.promien.value;
+      var h = form.wysokosc.value;
+
+      var obj = V_morton(r, h).toFixed(2);
+      var pole = Pc_morton(r, h).toFixed(2);
+
+      form.obj.value = obj;
+      form.pole.value = pole;
+
+      document.getElementById("pokaz1").innerHTML = "V = " + obj + " cm^3";
+      document.getElementById("pokaz2").innerHTML = "Pc = " + pole + " cm^2";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 30</h2>
+  <form onsubmit="oblicz_walec_morton(this); return false;">
+    Podaj promień r: <input name="promien" size="6"> cm<br>
+    Podaj wysokość h: <input name="wysokosc" size="6"> cm<br><br>
+    <input type="submit" value="Oblicz objętość i pole">
+    <br><br>
+    V = <input name="obj" size="8"> cm<sup>3</sup><br>
+    Pc = <input name="pole" size="8"> cm<sup>2</sup>
+  </form>
+  <table>
+    <tr id="pokaz1"></tr>
+    <tr id="pokaz2"></tr>
+  </table>
+</body>
+</html>

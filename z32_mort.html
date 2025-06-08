@@ -1,0 +1,31 @@
+<!-- Sebastian Morton - Zadanie 32 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 32 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function oblicz_drabina_morton() {
+      const D = parseFloat(document.getElementById("wysokosc_morton").value);
+      const X = parseFloat(document.getElementById("odleglosc_morton").value);
+
+      const dlugosc = Math.sqrt(D * D + X * X);
+      const kat_rad = Math.atan(D / X);
+      const kat_stopnie = kat_rad * (180 / Math.PI);
+
+      document.getElementById("wyniki_morton").innerHTML =
+        "Długość drabiny: " + dlugosc.toFixed(2) + " m<br>" +
+        "Kąt nachylenia: " + kat_stopnie.toFixed(2) + "&deg;";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 32</h2>
+  <form>
+    Podaj wysokość oparcia drabiny D (m): <input type="text" id="wysokosc_morton"><br><br>
+    Podaj odległość od muru X (m): <input type="text" id="odleglosc_morton"><br><br>
+    <input type="button" value="Oblicz" onclick="oblicz_drabina_morton()">
+  </form>
+  <div id="wyniki_morton" style="margin-top: 20px; font-size: 18px; color: darkblue;"></div>
+</body>
+</html>

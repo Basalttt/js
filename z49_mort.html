@@ -1,0 +1,41 @@
+<!-- Sebastian Morton - Zadanie 49 (Silnia iteracyjnie) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Morton_Zadanie49</title>
+  <script type="text/javascript">
+    function zadanie49_morton() {
+      const n_mor = parseInt(prompt("Podaj liczbę n (całkowitą, >= 0):"));
+      let silnia_mor = 1;
+
+      if (n_mor < 0 || isNaN(n_mor)) {
+        document.getElementById("wynik_morton49").innerHTML = "Błąd: podaj liczbę całkowitą większą lub równą 0.";
+        return;
+      }
+
+      for (let i_mor = 1; i_mor <= n_mor; i_mor++) {
+        silnia_mor *= i_mor;
+      }
+
+      document.getElementById("wynik_morton49").innerHTML =
+        `n = ${n_mor}<br>${n_mor}! = ${silnia_mor}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 49 (Silnia iteracyjnie)</h2>
+  <button onclick="zadanie49_morton()">Morton_Zadanie49</button>
+  <button onclick="alert(zadanie49_morton.toString())">Morton_Zadanie49-KOD</button>
+
+  <div id="wynik_morton49" style="margin-top: 20px; font-size: 20px; color: navy;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: darkgreen;">
+    <b>Opis:</b><br>
+    Silnia n! = 1 * 2 * 3 * ... * n<br>
+    0! = 1 (definicja)<br>
+    Pętla <code>for</code> używana tylko dla n > 0<br>
+    Zmienne: <code>n_mor</code>, <code>silnia_mor</code>
+  </div>
+</body>
+</html>

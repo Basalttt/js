@@ -1,0 +1,41 @@
+<!-- Sebastian Morton - Zadanie 46 (sprawdzanie danych do...while) -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Sprawdzenie danych Morton</title>
+  <script type="text/javascript">
+    function zadanie46_morton() {
+      let h_mor;
+      do {
+        const liczba1 = prompt("wysokość=", "");
+        h_mor = parseFloat(liczba1);
+      } while (h_mor <= 0);
+
+      let a_mor;
+      do {
+        const liczba2 = prompt("podstawa=", "");
+        a_mor = parseFloat(liczba2);
+      } while (!(a_mor > 0));
+
+      const Pole = (a_mor * h_mor) / 2;
+      document.getElementById("wynik_morton46").innerHTML =
+        "Pole = " + Pole.toFixed(2) + " cm²";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 46 (Sprawdzanie danych do...while)</h2>
+  <button onclick="zadanie46_morton()">Morton_Zadanie46</button>
+  <button onclick="alert(zadanie46_morton.toString())">Morton_Zadanie46-KOD</button>
+
+  <div id="wynik_morton46" style="margin-top: 20px; font-size: 24px; color: darkred;"></div>
+
+  <div style="margin-top: 30px; font-size: 16px; color: green;">
+    <b>Opis:</b><br>
+    Skrypt wczytuje dane z <code>prompt()</code> i sprawdza czy wysokość oraz podstawa są > 0.<br>
+    Użyto dwóch pętli <code>do...while</code> z rużnymi warunkami zakończenia.<br>
+    Zmienne z nazwiskiem: <code>a_mor</code>, <code>h_mor</code>.
+  </div>
+</body>
+</html>

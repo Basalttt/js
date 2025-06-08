@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sebastian Morton - Zadanie 24</title>
+  <script type="text/javascript">
+    function oblicz_morton24() {
+      var x1 = parseFloat(prompt("Podaj x1 [stopnie]:", ""));
+      var x2 = parseFloat(prompt("Podaj x2:", ""));
+
+      var y1 = Math.pow(x1, x2);
+      var y2 = Math.sqrt(x1) + Math.sqrt(x2);
+      var y3 = Math.abs(x1 - x2);
+
+      var rad = (x1 * Math.PI) / 180;
+      var sin = Math.sin(rad);
+      var cos = Math.cos(rad);
+      var tg = Math.tan(rad);
+
+      document.getElementById("wynik").innerHTML =
+        "Wczytane liczby:&nbsp;&nbsp;&nbsp; x1=" + x1 + "&nbsp;&nbsp;&nbsp; x2=" + x2 + "<br><br>" +
+        "y1 = x1^x2 = " + y1.toFixed(2) + "<br>" +
+        "y2 = √x1 + √x2 = " + y2.toFixed(2) + "<br>" +
+        "y3 = |x1 - x2| = " + y3.toFixed(2) + "<br><br>" +
+        "x1 w radianach = " + rad.toFixed(2) + "<br>" +
+        "sin(x1) = " + sin.toFixed(2) + "<br>" +
+        "cos(x1) = " + cos.toFixed(2) + "<br>" +
+        "tg(x1) = " + tg.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton, Zadanie 24</h2>
+  <input type="button" value="Oblicz zadanie 24" onclick="oblicz_morton24()">
+  <div id="wynik" style="margin-top:20px; font-size:18px; color:blue;"></div>
+</body>
+</html>

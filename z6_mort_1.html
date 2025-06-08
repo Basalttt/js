@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script language="JavaScript">
+            function close_win()
+            {
+                window.close();
+            }
+
+        </script>
+    </head>
+    <body>
+        <script language="JavaScript">
+            document.writeln("Rodzaje okienek".bold().fontsize(5)+"<br>");
+            document.writeln("okienko alert - wyswietlajaca okienko dialogowe z informacja i przyciskiem OK"+"<br>"+"<br>");
+            document.writeln("okienko prompt - generujaca okno, w ktorym uzytkownik moze wpisac wartosc, zwracana nastepnie do programu"+"<br>"+"<br>");
+            document.writeln("okienko confirm - sluzy do tego, aby uzytkownik cos potwierdzil"+"<br>"+"<br>");
+
+            document.writeln("Konwersja liczb".bold().fontsize(5)+"<br>");
+            document.writeln("Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków dlatego konieczna jest konwersji z ciągu znaków na wartości liczbowe aby wykonywac obliczenia."+"<br>"+"<br>")
+            document.writeln("parseFloat(zmienna) - konwersja zmiennej do typu float"+"<br>"+"<br>");
+            document.writeln("parseInt(zmienna) - konwersja zmiennej do typu int (liczbowego)"+"<br>"+"<br>");
+            document.writeln("toString(zmienna) - konwersja zmiennej do typu łańcuchowego"+"<br>"+"<br>");
+
+            document.writeln("Przy nadawaniu nazw zmiennych nalezy przestrzegac pewnych zasad".bold().fontsize(5)+"<br>");
+            document.writeln("1.".fontsize(5)+" Nazwa zmiennej musi się zaczynać od litery, znaku $ lub , może zawierać tylko litery (bez polskich znaków), cyfry oraz $ i .Poprawne nazwy zmiennych: zmienna1, $wynik, _rozmiar, wynik1, Rekord, $_graczBłędne nazwy zmiennych: 1zmienna, wynik gry, wysokosc&szerokosc, wynik.rekord, &gracz, wysokość, imie+nazwisko."+"<br>"+"<br>");
+            document.writeln("2.".fontsize(5)+" Wielkość liter ma znaczenie.Rekord i rekord to dwie różne zmienne! Jest to bardzo częsta przyczyna błędów w kodzie początkujących programistów"+"<br>"+"<br>");
+            document.writeln("3.".fontsize(5)+" Należy nie używać słów kluczowych JavaScript jako nazw zmiennych."+"<br>"+"<br>");
+
+            document.writeln("Typy danych w JavaScript".bold().fontsize(5)+"<br>");
+            document.writeln("W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++, typy zmiennych są definiowane w trakcie ich przypisywania. Podstawowe zmienne liczbowe w JavaScript to:"+"<br>"+"<br>");
+            document.writeln("Number -> typ liczbowy"+"<br>");
+            document.writeln("- zmienna calkowite"+"<br>");
+            document.writeln("- zniennoprzecinkowe"+"<br>"+"<br>");
+            document.writeln("String -> typ tekstowy"+"<br>");
+            document.writeln("Boolean -> typ logiczny"+"<br>");
+            document.writeln("Null -> pusta wartosc"+"<br>");
+            document.writeln("Undefined -> typ niezdefiniowany"+"<br>");
+            document.writeln("Object -> objekt"+"<br>"+"<br>");
+        </script>
+        <input type="button" value="zamknij okno" onclick="close_win()">
+    </body>
+</html>

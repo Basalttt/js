@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+ <head> 
+ <title> proste obliczenia</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<div style="color:red;font-size:50px;">
+ <script language="JavaScript">
+var dzien1=prompt("liczba1=","");
+var dzien2=prompt("liczba2=","");
+var sekundy=86400;
+var roznica;
+ var a=parseFloat(dzien1);
+ var b=parseFloat(dzien2);
+ if (dzien1>dzien2)
+ {
+    roznica = dzien1 - dzien2;
+ }
+ else 
+ {
+    roznica = dzien2 - dzien1;
+ }
+ var odpowiedz = roznica*sekundy;
+ document.write("odpowiedz to "+odpowiedz+" sekund");
+ </script>
+</div>
+</body>
+</html>

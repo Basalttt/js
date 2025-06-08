@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sebastian Morton - Zadanie 25</title>
+  <script type="text/javascript">
+    function oblicz_morton25() {
+      var No = parseFloat(prompt("Podaj ilość początkową atomów (No):", ""));
+      var t = parseFloat(prompt("Podaj czas w latach (t):", ""));
+      var T12 = parseFloat(prompt("Podaj okres połowicznego rozpadu (T1/2):", ""));
+
+      var lambda = Math.LN2 / T12;
+      var N = No * Math.exp(-lambda * t);
+
+      document.getElementById("wynik").innerHTML =
+        "<span style='font-size:20px; color:darkred;'><b>Autor: Sebastian Morton</b></span><br><br>" +
+        "Podane dane:<br>" +
+        "No = " + No + " szt.<br>" +
+        "t = " + t + " lat<br>" +
+        "T1/2 = " + T12 + " lat<br><br>" +
+        "Stała rozpadu λ = " + lambda.toFixed(7) + "<br>" +
+        "N (ilość pozostałych atomów) = " + N.toFixed(2) + " szt.";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Rozpad promieniotwórczy</h2>
+  <input type="button" value="Oblicz rozpad" onclick="oblicz_morton25()">
+  <div id="wynik" style="margin-top:20px;"></div>
+</body>
+</html>

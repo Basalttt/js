@@ -1,0 +1,32 @@
+<!-- Sebastian Morton - Zadanie 34 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 34 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function oblicz_rozpad_morton() {
+      var No = parseFloat(prompt("Podaj ilość początkową atomów (No):"));
+      var t = parseFloat(prompt("Podaj czas [lata]:"));
+      var T12 = parseFloat(prompt("Podaj okres połowicznego zaniku (T1/2):"));
+
+      var lambda = Math.LN2 / T12;
+      var N = No * Math.exp(-lambda * t);
+
+      document.getElementById("wyniki_morton34").innerHTML =
+        "<b>Dane wejściowe:</b><br>" +
+        "No = " + No + " szt.<br>" +
+        "t = " + t + " lat<br>" +
+        "T1/2 = " + T12 + " lat<br><br>" +
+        "<b>Obliczenia:</b><br>" +
+        "Stała rozpadu λ = " + lambda.toFixed(7) + "<br>" +
+        "Pozostała ilość atomów N = " + N.toFixed(2) + " szt.";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 34 (Rozpad promieniotwórczy)</h2>
+  <input type="button" value="Oblicz rozpad" onclick="oblicz_rozpad_morton()">
+  <div id="wyniki_morton34" style="margin-top: 20px; font-size: 18px; color: maroon;"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>zadanie16_kow_KOD.html</title>
+</head>
+<body>
+  <h2>Kod programu - Zadanie 16</h2>
+  <textarea rows="20" cols="90" readonly>
+var a = parseFloat(prompt("Podaj pierwszą liczbę A:", ""));
+var b = parseFloat(prompt("Podaj drugą liczbę B:", ""));
+var wynik = Math.pow(a + b, 3);
+var srodek = 3 * Math.pow(a, 2) * b + 3 * a * Math.pow(b, 2);
+var skladniki = Math.pow(a, 3) + srodek + Math.pow(b, 3);
+
+document.write("<div style='color:navy; font-size:47px;'>");
+document.write("Wczytane liczby: A = " + a + " B = " + b + "<br><br>");
+document.write("(" + a + " + " + b + ")^3 = " + a + "^3 + 3*" + a + "^2*" + b + "+ 3*" + a + "*" + b + "^2 + " + b + "^3 = " + wynik + "<br>");
+document.write("</div>");
+  </textarea>
+  <br><br>
+  <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

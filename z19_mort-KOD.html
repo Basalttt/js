@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+  <meta charset='UTF-8'>
+  <title>zadanie19_kow_KOD.html</title>
+</head>
+<body>
+  <h2>Kod programu - Zadanie 19</h2>
+  <textarea rows="20" cols="90" readonly>
+function Pole_morton() {
+  var a_mor = parseFloat(document.getElementById('dlugosc').value);
+  var p_mor = a_mor * a_mor;
+  document.getElementById("wynik").innerHTML = "Pole = " + p_mor.toFixed(2) + " cm^2";
+}
+
+function Obwod_morton() {
+  var a_mor = parseFloat(document.getElementById('dlugosc').value);
+  var o_mor = 4 * a_mor;
+  document.getElementById("wynik").innerHTML = "Obwód = " + o_mor.toFixed(2) + " cm";
+}
+
+Bok kwadratu: <input type="text" id="dlugosc">
+<input type="button" value="Oblicz pole" onclick="Pole_morton()">
+<input type="button" value="Oblicz obwód" onclick="Obwod_morton()">
+<div id="wynik"></div>
+  </textarea>
+</body>
+</html>

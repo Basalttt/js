@@ -1,0 +1,49 @@
+<!-- Sebastian Morton - Zadanie 29 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 29 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function AB_morton(xa, ya, xb, yb) {
+      return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+    }
+
+    function BC_morton(xb, yb, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+    }
+
+    function AC_morton(xa, ya, xc, yc) {
+      return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+    }
+
+    function oblicz_morton29() {
+      var xa = parseFloat(document.getElementById("xa_morton").value);
+      var ya = parseFloat(document.getElementById("ya_morton").value);
+      var xb = parseFloat(document.getElementById("xb_morton").value);
+      var yb = parseFloat(document.getElementById("yb_morton").value);
+      var xc = parseFloat(document.getElementById("xc_morton").value);
+      var yc = parseFloat(document.getElementById("yc_morton").value);
+
+      var ab = AB_morton(xa, ya, xb, yb);
+      var bc = BC_morton(xb, yb, xc, yc);
+      var ac = AC_morton(xa, ya, xc, yc);
+
+      document.getElementById("wynik").innerHTML =
+        "Długość AB = " + ab.toFixed(2) + "<br>" +
+        "Długość BC = " + bc.toFixed(2) + "<br>" +
+        "Długość AC = " + ac.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 29</h2>
+  <form>
+    Punkt A (xa, ya): <input type="text" id="xa_morton"> <input type="text" id="ya_morton"><br><br>
+    Punkt B (xb, yb): <input type="text" id="xb_morton"> <input type="text" id="yb_morton"><br><br>
+    Punkt C (xc, yc): <input type="text" id="xc_morton"> <input type="text" id="yc_morton"><br><br>
+    <input type="button" value="Oblicz boki" onclick="oblicz_morton29()">
+  </form>
+  <div id="wynik" style="margin-top:20px; font-size:18px; color:green;"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+  <meta charset='UTF-8'>
+  <title>zadanie18_kow_KOD.html</title>
+</head>
+<body>
+  <h2>Kod programu - Zadanie 18</h2>
+  <textarea rows="22" cols="90" readonly>
+var a = parseFloat(prompt("a=", ""));
+var b = parseFloat(prompt("b=", ""));
+
+function suma_mor(a, b) {
+  return a + b;
+}
+function odejmowanie_mor(a, b) {
+  return a - b;
+}
+function mnozenie_mor(a, b) {
+  return a * b;
+}
+function od_kwadratu_mor(a, b) {
+  return "a^2=" + Math.pow(a,2) + " b^2=" + Math.pow(b,2);
+}
+function reszta_z_dzielenia_a_przez_b_mor(a, b) {
+  return a % b;
+}
+
+document.write("suma = " + suma_mor(a, b) + "<br>");
+document.write("różnica = " + odejmowanie_mor(a, b) + "<br>");
+document.write("iloczyn = " + mnozenie_mor(a, b) + "<br>");
+document.write("kwadraty = " + od_kwadratu_mor(a, b) + "<br>");
+document.write("reszta z dzielenia = " + reszta_z_dzielenia_a_przez_b_mor(a, b));
+  </textarea>
+</body>
+</html>

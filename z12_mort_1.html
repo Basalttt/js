@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html>
+ <head> 
+ <title> proste obliczenia</title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+<div style="color:green;font-size:52px;">
+ <script language="JavaScript">
+var D1_kow=prompt("dzien1=","");
+var D2_kow=prompt("dzien2=","");
+var G1_kow=prompt("godzina1=","");
+var G2_kow=prompt("godzina2=","");
+var sekundy=86400;
+var sekundy2 =	3600;
+var roznica1;
+var roznica2;
+ var a=parseFloat( D1_kow);
+ var b=parseFloat(D2_kow);
+ var c=parseFloat(G1_kow);
+ var d=parseFloat(G2_kow);
+ if ( D1_kow> D2_kow)
+ {
+    roznica1 =  D1_kow - D2_kow;
+ }
+ else 
+ {
+    roznica1 =D2_kow -  D1_kow;
+ }
+
+
+ if (G1_kow>G2_kow)
+ {
+    roznica2 = G1_kow - G2_kow;
+ }
+ else 
+ {
+    roznica2 = G2_kow - G1_kow;
+ }
+ var odpowiedz = (roznica1*sekundy)+ (roznica2*sekundy2);
+ document.write("odpowiedz to "+odpowiedz+" sekund");
+ </script>
+</div>
+</body>
+</html>

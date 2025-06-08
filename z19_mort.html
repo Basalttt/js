@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 19 - Morton</title>
+</head>
+<body>
+  <h1>Kwadrat - Morton</h1>
+  <label>Podaj długość boku: </label>
+  <input type="text" id="dlugosc_mor" value="">
+  <br><br>
+  <input type="button" value="Oblicz pole" onclick="Pole_morton()">
+  <input type="button" value="Oblicz obwód" onclick="Obwod_morton()">
+  <div id="wynik_morton" style="color:red;font-size:40px;"></div>
+
+  <script>
+    function Pole_morton() {
+      let a_mor = parseFloat(document.getElementById("dlugosc_mor").value);
+      let wynik = a_mor * a_mor;
+      document.getElementById("wynik_morton").innerHTML = "Pole kwadratu = " + wynik.toFixed(2) + " cm²";
+    }
+
+    function Obwod_morton() {
+      let a_mor = parseFloat(document.getElementById("dlugosc_mor").value);
+      let wynik = 4 * a_mor;
+      document.getElementById("wynik_morton").innerHTML = "Obwód kwadratu = " + wynik.toFixed(2) + " cm";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- Sebastian Morton - Zadanie 31 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 31 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function Pole_morton(a_mor, b_mor) {
+      return a_mor * b_mor;
+    }
+
+    function Obwod_morton(a_mor, b_mor) {
+      return 2 * (a_mor + b_mor);
+    }
+
+    function oblicz_prostokat_morton() {
+      var a = parseFloat(document.getElementById("a_dana_mor").value);
+      var b = parseFloat(document.getElementById("b_dana_mor").value);
+
+      var pole = Pole_morton(a, b);
+      var obwod = Obwod_morton(a, b);
+
+      document.getElementById("pole").value = pole.toFixed(2);
+      document.getElementById("obw").value = obwod.toFixed(2);
+      document.getElementById("wyprowadz_pole_mor").innerHTML = "Pole prostokąta: " + pole.toFixed(2) + " cm^2";
+      document.getElementById("wyprowadz_obwod_mor").innerHTML = "Obwód prostokąta: " + obwod.toFixed(2) + " cm";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 31</h2>
+  <form>
+    Podaj bok a: <input type="text" id="a_dana_mor"> cm<br><br>
+    Podaj bok b: <input type="text" id="b_dana_mor"> cm<br><br>
+    <input type="button" value="Oblicz pole i obwód" onclick="oblicz_prostokat_morton()"><br><br>
+    Pole: <input type="text" id="pole" readonly> cm²<br>
+    Obwód: <input type="text" id="obw" readonly> cm<br><br>
+  </form>
+  <div id="wyprowadz_pole_mor" style="color: green; font-size: 18px;"></div>
+  <div id="wyprowadz_obwod_mor" style="color: navy; font-size: 18px;"></div>
+</body>
+</html>

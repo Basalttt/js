@@ -1,0 +1,45 @@
+<!-- Sebastian Morton - Zadanie 35 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 35 - Sebastian Morton</title>
+  <script type="text/javascript">
+    function oblicz_rozpad_testowy_morton() {
+      // Test: C14 => T1/2 = 5700 lat, No = 1000, t = 11400
+      var No = 1000;
+      var t = 11400;
+      var T12 = 5700; // dla izotopu C14
+
+      var lambda = Math.LN2 / T12;
+      var N = No * Math.exp(-lambda * t);
+
+      document.getElementById("test_c14_morton").innerHTML =
+        "<b>Rozpad C14:</b><br>" +
+        "No = 1000 szt.<br>t = 11400 lat<br>T1/2 = 5700 lat<br><br>" +
+        "λ = " + lambda.toFixed(7) + "<br>" +
+        "Pozostało N = " + N.toFixed(2) + " szt.";
+
+      // Test: Rad (Ra-226) => T1/2 ~1600 lat
+      var No2 = 5000;
+      var t2 = 3200;
+      var T12_2 = 1600; // dla radu
+
+      var lambda2 = Math.LN2 / T12_2;
+      var N2 = No2 * Math.exp(-lambda2 * t2);
+
+      document.getElementById("test_ra_morton").innerHTML =
+        "<b>Rozpad radu (Ra-226):</b><br>" +
+        "No = 5000 szt.<br>t = 3200 lat<br>T1/2 = 1600 lat<br><br>" +
+        "λ = " + lambda2.toFixed(7) + "<br>" +
+        "Pozostało N = " + N2.toFixed(2) + " szt.";
+    }
+  </script>
+</head>
+<body>
+  <h2>Sebastian Morton - Zadanie 35 (Testy rozpadu)</h2>
+  <button onclick="oblicz_rozpad_testowy_morton()">Uruchom testy dla C14 i Ra-226</button>
+  <div id="test_c14_morton" style="margin-top: 20px; font-size: 17px; color: darkgreen;"></div>
+  <div id="test_ra_morton" style="margin-top: 20px; font-size: 17px; color: darkblue;"></div>
+</body>
+</html>
