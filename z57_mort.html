@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 57 - Morton</title>
+  <script type="text/javascript">
+    function drukuj() {
+      var start = 17;
+      var stop = start + 15;
+      var linia = 0;
+      var wynik = "";
+
+      for (var i = start; i <= stop; i++) {
+        var pierw2 = Math.sqrt(i);
+        var pierw4 = Math.sqrt(pierw2);
+        wynik += "I=" + i + " pierw_2(" + i + ")=" + pierw2.toFixed(2) + " pierw_4(" + i + ")=" + pierw4.toFixed(2) + "<br>";
+        linia++;
+        if (linia % 3 === 0) {
+          wynik += "<hr>";
+        }
+      }
+
+      document.getElementById("wyniki").innerHTML = wynik;
+    }
+  </script>
+</head>
+<body onload="drukuj()">
+  <h2>Pierwiastki drugiego i czwartego stopnia</h2>
+  <div id="wyniki" style="font-family:monospace; font-size:18px;"></div>
+</body>
+</html>
